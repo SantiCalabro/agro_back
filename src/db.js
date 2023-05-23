@@ -2,7 +2,7 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const sequelize = new Sequelize("agroMysql", "admin", "Sc526605dcv*", {
+const sequelize = new Sequelize("database-agro", "admin", "Sc526605dcv*", {
   host: "database-agro.c13rc7bimzpk.us-east-1.rds.amazonaws.com",
   dialect: "mysql",
   logging: false,
