@@ -1,7 +1,7 @@
 // const server = require("./src/App.js");
 const { conn } = require("./src/db.js");
 
-import { server } from "./src/app.js";
+import server from "./src/app.js";
 // import { conn } from "./src/db.js";
 
 // const server = require("./src/app.js");
