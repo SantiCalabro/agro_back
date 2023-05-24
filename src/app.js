@@ -15,10 +15,7 @@ var corsOptions = {
   optionsSuccessStatus: 204,
 };
 server.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "agro.c13rc7bimzpk.us-east-1.rds.amazonaws.com"
-  );
+  res.header("Access-Control-Allow-Origin", "http://54.82.181.79:3036/");
   res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Headers",
