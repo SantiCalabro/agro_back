@@ -15,7 +15,10 @@ var corsOptions = {
   optionsSuccessStatus: 204,
 };
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3001");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "database-agro.c13rc7bimzpk.us-east-1.rds.amazonaws.com"
+  );
   res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Headers",
@@ -34,7 +37,7 @@ server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
 server.use(morgan("dev"));
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5173"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
@@ -55,4 +58,4 @@ server.use((err, req, res, next) => {
   res.status(status).send(message);
 });
 
-module.exports = { server };
+module.exports = server;
