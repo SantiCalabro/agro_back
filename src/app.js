@@ -3,7 +3,9 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const routes = require("./routes/index.js");
+const fs = require("fs");
 
+const file = fs.readFileSync("./A06EB49BE41A9B5DA40D271B749AA0A7.txt");
 require("./db.js");
 
 const server = express();
@@ -26,7 +28,7 @@ server.use((req, res, next) => {
 });
 
 server.use(cors());
-
+n;
 server.name = "API";
 
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
@@ -55,4 +57,10 @@ server.use((err, req, res, next) => {
   res.status(status).send(message);
 });
 
+server.get("/.well-known/pki-validation/A06EB49BE41A9B5DA40D271B749AA0A7.txt"),
+  (req, res) => {
+    res.sendFile(
+      "C:UsersSANTIAGODesktopDocuments\02 TrabajoProgramacionAgroalimentos e Insumos del Mercosur\backMysqlA06EB49BE41A9B5DA40D271B749AA0A7.txt"
+    );
+  };
 module.exports = server;
