@@ -28,7 +28,7 @@ server.use((req, res, next) => {
 });
 
 server.use(cors());
-n;
+
 server.name = "API";
 
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
